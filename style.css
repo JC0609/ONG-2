@@ -1,0 +1,205 @@
+
+:root {
+    --verde: #176b4d;
+    --verde-escuro: #0d4934;
+    --fundo: #f7f9f8;
+    --branco: #ffffff;
+    --texto: #17201c;
+    --borda: #b9c8c0;
+    --erro: #a40000;
+    --sucesso: #126b3d;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 16px;
+}
+
+.header-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, nav a:focus {
+    background: #2d8565;
+}
+
+nav a[aria-current="page"] {
+    background: #3b9775;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 18px 50px;
+}
+
+.hero, .card, form, .mensagem {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1, h2, h3 { color: var(--verde-escuro); }
+
+.btn, button {
+    background: var(--verde);
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover, button:focus, .btn:hover, .btn:focus {
+    background: var(--verde-escuro);
+}
+
+form {
+    max-width: 760px;
+}
+
+fieldset {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #7b8b83;
+    border-radius: 6px;
+    font: inherit;
+    background: white;
+    color: var(--texto);
+}
+
+input:focus, select:focus, textarea:focus, button:focus, a:focus {
+    outline: 3px solid #ffbf00;
+    outline-offset: 2px;
+}
+
+.campo-erro {
+    border-color: var(--erro);
+}
+
+.campo-ok {
+    border-color: var(--sucesso);
+}
+
+.mensagem-erro {
+    color: var(--erro);
+    font-weight: bold;
+}
+
+.mensagem-ok {
+    color: var(--sucesso);
+    font-weight: bold;
+}
+
+footer {
+    background: #10251d;
+    color: white;
+    padding: 25px 18px;
+}
+
+.footer-conteudo {
+    max-width: 1100px;
+    margin: auto;
+}
+
+footer a { color: white; }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    background: white;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 8px;
+}
+
+@media (max-width: 650px) {
+    .header-conteudo { flex-direction: column; align-items: flex-start; }
+    nav ul { flex-direction: column; width: 100%; }
+    nav a { width: 100%; }
+}
