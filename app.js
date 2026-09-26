@@ -31,7 +31,7 @@ const paginas = {
             <h1 id="titulo-projetos">Projetos e ações</h1>
             <div class="grid">
                 <article class="card">
-                    <img src="../imagens/projeto1.jpg" alt="Ilustração do projeto comunitário">
+                    <img src="projeto1.jpg" alt="Ilustração do projeto comunitário">
                     <h2>Projeto Comunitário</h2>
                     <p>Realização de ações voltadas para a comunidade.</p>
                 </article>
